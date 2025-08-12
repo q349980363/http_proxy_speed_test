@@ -1,16 +1,39 @@
-# http_proxy_speed_test
+# HTTP Proxy Speed Test
 
-A new Flutter project.
+一个跨平台的 HTTP 代理下载速度测试工具，支持直连与 HTTP 代理模式，可实时显示下载速度、平均速度、最大速度和总下载量，并绘制实时速度曲线。
 
-## Getting Started
+## 功能特性
+- 支持直连与 HTTP 代理模式
+- 实时显示：
+  - **当前速度**
+  - **平均速度**
+  - **最大速度**
+  - **已下载数据量**
+- 实时速度折线图
+- 可自定义下载测试 URL
+- 跨平台（Windows / macOS / Linux）
 
-This project is a starting point for a Flutter application.
+## 界面预览
+![screenshot](docs/screenshot.png)
 
-A few resources to get you started if this is your first Flutter project:
+## 使用方法
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+1. 下载并运行程序
+2. 在输入框中填入测试 URL（默认为 Cloudflare 测速文件）
+3. 可选：勾选 **使用HTTP代理** 并填写代理地址（格式：`http://ip:port`）
+4. 点击 **开始测速**
+5. 查看实时速度曲线及统计数据
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 编译方法
+
+### 环境要求
+- Flutter SDK (>=3.x)
+- Dart SDK
+- 已配置好目标平台构建环境
+
+### 编译步骤
+```bash
+git clone https://github.com/yourname/http_proxy_speed_test.git
+cd http_proxy_speed_test
+flutter pub get
+flutter run
